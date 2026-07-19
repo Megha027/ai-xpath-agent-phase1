@@ -1,9 +1,13 @@
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
+*.py[codz]
+*$py.class
 
 # Virtual Environment
 .venv/
+venv/
+env/
+ENV/
 
 # IDE
 .idea/
@@ -19,3 +23,33 @@ reports/~$*
 # OS
 .DS_Store
 Thumbs.db
+
+# Distribution / packaging
+.Python
+build/
+dist/
+downloads/
+.eggs/
+*.egg-info/
+*.egg
+
+# Coverage
+.coverage
+.coverage.*
+.pytest_cache/
+.mypy_cache/
+.tox/
+.nox/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.envrc
+
+# VS Code
+.vscode/
+
+# Temporary files
+tempCodeRunnerFile.py
