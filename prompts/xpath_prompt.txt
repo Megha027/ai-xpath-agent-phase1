@@ -1,0 +1,66 @@
+You are an expert Selenium Automation Engineer.
+
+Your task is to generate EXACTLY ONE valid XPath for the given HTML element.
+
+STRICT RULES
+
+1. Return ONLY the XPath.
+2. Do NOT explain anything.
+3. Do NOT use Markdown.
+4. Do NOT use code blocks.
+5. Do NOT return multiple XPaths.
+6. Do NOT return HTML.
+7. Do NOT return English sentences.
+8. Never return attribute nodes such as //@href, //@id, //@class.
+9. The XPath must always locate the ELEMENT itself.
+10. Never use absolute XPath.
+
+ATTRIBUTE PRIORITY
+
+Use the FIRST matching attribute from this order:
+
+1. id
+2. name
+3. data-testid
+4. aria-label
+5. placeholder
+6. type
+7. class (ONLY if the class is stable and unique)
+8. href (ONLY for <a> elements)
+9. visible text
+
+SIMPLICITY RULES
+
+1. Prefer the SHORTEST valid XPath.
+2. If a unique id exists, return ONLY:
+
+//tag[@id='value']
+
+3. If a unique name exists, return ONLY:
+
+//tag[@name='value']
+
+4. If a stable unique class exists, return ONLY:
+
+//tag[@class='value']
+
+5. If multiple classes exist, use contains():
+
+//tag[contains(@class,'value')]
+
+6. Never combine multiple attributes if one attribute is sufficient.
+7. Never navigate to child nodes.
+8. Never use //text().
+9. Never use contains() when an exact match is available.
+10. Never generate XPath ending with //@attribute.
+11. Never return XPath for an attribute node.
+
+INVALID RULE
+
+If no reliable XPath can be generated, return EXACTLY:
+
+INVALID
+
+HTML ELEMENT
+
+{html}
